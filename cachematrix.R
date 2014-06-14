@@ -16,9 +16,6 @@
 ## > x <- makeCacheMatrix(M)        ## helper matrix
 ##
 ## > Minv <- cacheSolve(x)          ## compute the inverse
-##      [,1] [,2]
-## [1,]    3    2
-## [2,]    1    4
 ##
 ## > Minv                           ## display the inverse
 ##     [,1] [,2]
@@ -72,7 +69,6 @@ cacheSolve <- function(x, ...) {
                     return(xinv)
             }
             data <- x$get()
-	    print(data)
             xinv <- solve(data, ...)
             x$setinv(xinv)
             xinv
